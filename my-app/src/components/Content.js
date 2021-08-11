@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import css from './css/Content.module.css'
-import {savedPosts} from './../posts.json';
+import PostItem from './PostItem';
+import {savedPosts} from '../posts.json';
+
 
 export class Content extends Component {
     constructor(props) {
@@ -19,11 +21,11 @@ export class Content extends Component {
                     <h1>My Photos</h1>
                 </div>
                 <div className={css.SearchResults}>
-                    
+                    <PostItem savedPosts={savedPosts}/>
                 </div>
             </div>
         )
     }
 }
 
-export default Content
+export default Content;
